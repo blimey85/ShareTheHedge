@@ -1,0 +1,61 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import './prism.css';
+@import 'tailwindcss/utilities';
+
+.react-icons {
+    vertical-align: middle;
+    height: 24px !important;
+    width: 24px !important;
+}
+.inner-animation {
+    animation: innerAnimation 5s ease-in-out;
+}
+
+@keyframes innerAnimation {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 0;
+    }
+    11% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    97% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.pill-animation {
+    animation: pillAnimation 5s ease-in-out;
+}
+
+@keyframes pillAnimation {
+    0% {
+        width: 0rem;
+        height: 0rem;
+        top: 2rem;
+    }
+    5% {
+        width: 21rem;
+        height: 3rem;
+    }
+    7% {
+        width: 20rem;
+        height: 3rem;
+        top: 1rem;
+    }
+    92% {
+        scale: 1;
+    }
+    100% {
+        scale: 0;
+    }
+}
