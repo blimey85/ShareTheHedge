@@ -80,7 +80,7 @@ export const metadata: Metadata = {
 export default function Authors() {
     return (
         <SimpleLayout
-            title="Meet our Authors."
+            title="Meet our Authors"
             intro="Discover a world of imagination and creativity with our unique collection of indie authors, each bringing their own distinctive voice and compelling narratives. These talented individuals have been handpicked for their innovative storytelling and diverse range of genres. From riveting thrillers that will keep you on the edge of your seat, to heartwarming romances that explore the complexities of love, our indie authors have crafted stories that will captivate your mind and stir your soul. Embark on an unforgettable literary journey that promises to entertain, inspire, and challenge you, as you delve into the rich and varied worlds these authors have created.">
             <div className="mx-auto max-w-7xl">
                 <ul
@@ -100,7 +100,7 @@ export default function Authors() {
                             </div>
                             <h2 className="mt-6 text-lg font-semibold leading-8 text-gray-900 dark:text-white">
                                 <Link
-                                    className="transition duration-200 ease-in hover:text-teal-300 dark:hover:text-teal-400"
+                                    className="transition duration-200 ease-in hover:text-sky-300 dark:hover:text-sky-400"
                                     href={person.websiteUrl}>
                                     {person.name}
                                 </Link>

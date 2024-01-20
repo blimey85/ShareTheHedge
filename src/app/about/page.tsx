@@ -28,8 +28,8 @@ function SocialLink({
         <li className={clsx(className, 'flex')}>
             <Link
                 href={href}
-                className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
-                <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+                className="group flex text-sm font-medium text-zinc-800 transition hover:text-sky-500 dark:text-zinc-200 dark:hover:text-sky-500">
+                <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-sky-500" />
                 <span className="ml-4">{children}</span>
             </Link>
         </li>
@@ -67,7 +67,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className="lg:order-first lg:row-span-2">
-                    <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+                    <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
                         Share The Hedge
                     </h1>
                     <h2 className="text-2xl">Founded 2024</h2>
