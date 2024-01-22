@@ -9,7 +9,8 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from './Container'
-import avatarImage from '@/images/cute.png'
+// import avatarImage from '@/images/cute.png'
+import avatarImage from '@/images/logo.svg'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     return (
@@ -260,11 +261,11 @@ function Avatar({
             <Image
                 src={avatarImage}
                 alt=""
-                sizes={large ? '4rem' : '2.25rem'}
-                className={clsx(
-                    'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
-                    large ? 'h-16 w-16' : 'h-9 w-9'
-                )}
+                // sizes={large ? '4rem' : '2.25rem'}
+                // className={clsx(
+                //     'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
+                //     large ? 'h-16 w-16' : 'h-9 w-9'
+                // )}
                 priority
             />
         </Link>
@@ -419,7 +420,8 @@ export function Header() {
                                     />
                                     <Avatar
                                         large
-                                        className="block h-16 w-16 origin-left"
+                                        // className="block h-16 w-16 origin-left"
+                                        className="block max-w-lg origin-left"
                                         style={{
                                             transform:
                                                 'var(--avatar-image-transform)',
