@@ -125,6 +125,7 @@ function MobileNavigation(
                                 className="-m-1 p-1">
                                 <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
                             </Popover.Button>
+                            <ThemeToggle />
                             <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
                                 Navigation
                             </h2>
@@ -234,15 +235,7 @@ function AvatarContainer({
     className,
     ...props
 }: React.ComponentPropsWithoutRef<'div'>) {
-    return (
-        <div
-            className={clsx(
-                className,
-                'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
-            )}
-            {...props}
-        />
-    )
+    return <div {...props} />
 }
 
 function Avatar({
@@ -458,7 +451,7 @@ export function Header() {
                                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
                             </div>
                             <div className="flex justify-end md:flex-1">
-                                <div className="pointer-events-auto">
+                                <div className="pointer-events-auto hidden md:block">
                                     <ThemeToggle />
                                 </div>
                             </div>
