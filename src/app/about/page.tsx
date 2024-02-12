@@ -4,13 +4,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '../../components/Container'
-import {
-    // PiGoodreadsLogoBold,
-    PiInstagramLogoBold,
-    PiSpotifyLogoBold,
-    PiTiktokLogoBold,
-    // PiYoutubeLogoBold,
-} from 'react-icons/pi'
+import { PiInstagramLogo, PiSpotifyLogo, PiTiktokLogo } from 'react-icons/pi'
 import portraitImage from '@/images/portrait.jpg'
 
 function SocialLink({
@@ -73,73 +67,51 @@ export default function About() {
                     <h2 className="text-2xl">Founded 2024</h2>
                     <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                         <p>
-                            Introducing Share The Hedge, a groundbreaking
-                            publishing imprint that redefines the traditional
-                            author-publisher relationship. In this innovative
-                            platform, authors unite to form a community where
-                            collaboration and mutual support are at the
-                            forefront. At Share The Hedge, it is all about
-                            sharing information, knowledge, contacts, and
-                            support to help each other thrive in the
-                            ever-evolving world of publishing.
+                            Introducing Share The Hedge, a groundbreaking publishing imprint that redefines the
+                            traditional author-publisher relationship. In this innovative platform, authors unite to
+                            form a community where collaboration and mutual support are at the forefront. At Share The
+                            Hedge, it is all about sharing information, knowledge, contacts, and support to help each
+                            other thrive in the ever-evolving world of publishing.
                         </p>
                         <p>
-                            Gone are the days of isolated writers navigating the
-                            daunting publishing landscape alone. Share The Hedge
-                            fosters an environment of camaraderie, where authors
-                            work together to amplify their voices and reach new
-                            heights of success. By pooling their collective
-                            expertise, authors can tap into a vast network of
-                            resources, gaining invaluable insights and expanding
-                            their professional connections.
+                            Gone are the days of isolated writers navigating the daunting publishing landscape alone.
+                            Share The Hedge fosters an environment of camaraderie, where authors work together to
+                            amplify their voices and reach new heights of success. By pooling their collective
+                            expertise, authors can tap into a vast network of resources, gaining invaluable insights and
+                            expanding their professional connections.
                         </p>
                         <p>
-                            With Share The Hedge, authors can access a wealth of
-                            shared knowledge, benefiting from the diverse
-                            experiences and perspectives of their peers. From
-                            navigating the intricacies of manuscript editing to
-                            mastering the art of book marketing, every author
-                            can find guidance and support within this vibrant
-                            community.
+                            With Share The Hedge, authors can access a wealth of shared knowledge, benefiting from the
+                            diverse experiences and perspectives of their peers. From navigating the intricacies of
+                            manuscript editing to mastering the art of book marketing, every author can find guidance
+                            and support within this vibrant community.
                         </p>
                         <p>
-                            Moreover, Share The Hedge empowers authors to take
-                            ownership of their careers. By participating in
-                            joint marketing initiatives, cross-promotions, and
-                            collaborative events, authors can leverage their
-                            combined strengths to reach wider audiences and
-                            maximize their impact. Together, they create a
-                            powerful synergy that propels their collective
-                            success to new heights.
+                            Moreover, Share The Hedge empowers authors to take ownership of their careers. By
+                            participating in joint marketing initiatives, cross-promotions, and collaborative events,
+                            authors can leverage their combined strengths to reach wider audiences and maximize their
+                            impact. Together, they create a powerful synergy that propels their collective success to
+                            new heights.
                         </p>
                         <p>
-                            Whether you are an established author looking for
-                            fresh opportunities or an aspiring writer seeking
-                            guidance and mentorship, Share The Hedge is the
-                            publishing imprint that will revolutionize your
-                            journey. Join this dynamic community and experience
-                            the transformative power of collaboration, as you
-                            share information, knowledge, contacts, and support
-                            to unlock your true potential as an author.
+                            Whether you are an established author looking for fresh opportunities or an aspiring writer
+                            seeking guidance and mentorship, Share The Hedge is the publishing imprint that will
+                            revolutionize your journey. Join this dynamic community and experience the transformative
+                            power of collaboration, as you share information, knowledge, contacts, and support to unlock
+                            your true potential as an author.
                         </p>
                         <p>Together, we can achieve greatness.</p>
                     </div>
                 </div>
                 <div className="lg:pl-20">
                     <ul role="list">
-                        <SocialLink href="#" icon={PiInstagramLogoBold}>
+                        <SocialLink href="#" icon={PiInstagramLogo}>
                             Follow on Instagram
                         </SocialLink>
-                        <SocialLink
-                            href="#"
-                            icon={PiTiktokLogoBold}
-                            className="mt-4">
+                        <SocialLink href="#" icon={PiTiktokLogo} className="mt-4">
                             Follow on TikTok
                         </SocialLink>
-                        <SocialLink
-                            href="#"
-                            icon={PiSpotifyLogoBold}
-                            className="mt-4">
+                        <SocialLink href="#" icon={PiSpotifyLogo} className="mt-4">
                             Follow on Spotify
                         </SocialLink>
 

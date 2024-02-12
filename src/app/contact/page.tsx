@@ -15,21 +15,11 @@ const ContactForm = () => {
     const [toastVarient, setToastVarient] = useState('success')
     const [toastHeading, setToastHeading] = useState('Notification Header')
     const validationSchema = object().shape({
-        firstname: string()
-            .required('First Name is required')
-            .min(2, 'First name must be at least 2 characters'),
-        lastname: string()
-            .required('Last Name is required')
-            .min(2, 'Last Name must be at least 2 characters'),
-        email: string()
-            .required('Email Address is required')
-            .email('Invalid email address'),
-        subject: string()
-            .required('Subject is required')
-            .min(3, 'Subject must be at least 3 characters'),
-        message: string()
-            .required('Message is required')
-            .min(20, 'Message must be at least 20 characters'),
+        firstname: string().required('First Name is required').min(2, 'First name must be at least 2 characters'),
+        lastname: string().required('Last Name is required').min(2, 'Last Name must be at least 2 characters'),
+        email: string().required('Email Address is required').email('Invalid email address'),
+        subject: string().required('Subject is required').min(3, 'Subject must be at least 3 characters'),
+        message: string().required('Message is required').min(20, 'Message must be at least 20 characters'),
     })
 
     const {
@@ -90,20 +80,6 @@ const ContactForm = () => {
                     setIsToastVisible={setIsToastVisible}
                 />
             )}
-            {/* <div className="flex flex-col gap-4">
-                <button
-                    className="flex items-center justify-center rounded-full bg-green-300/20 px-6 py-2 text-green-600 ring-2 ring-green-600/30 transition-all duration-300 hover:bg-green-300 hover:text-black active:scale-95 disabled:cursor-not-allowed disabled:saturate-0"
-                    disabled={isToastVisible}
-                    onClick={() => {
-                        if (!isToastVisible) {
-                            setIsToastVisible(true)
-                            setToastVarient('success')
-                            setToastHeading('Contact Form Submitted')
-                        }
-                    }}>
-                    Show Success Toast
-                </button>
-            </div> */}
             <form className="container" onSubmit={handleSubmit(onSubmit)}>
                 <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
                     <div className="lg:pl-20">
@@ -120,9 +96,7 @@ const ContactForm = () => {
                         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
                             Drop Us a Line
                         </h1>
-                        <h2 className="text-2xl">
-                            We would love to hear from you.
-                        </h2>
+                        <h2 className="text-2xl">We would love to hear from you.</h2>
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>
                                 <div className="mt-2.5">
@@ -137,9 +111,7 @@ const ContactForm = () => {
                                         className="w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-sky-400 dark:focus:ring-sky-400/10 sm:text-sm"
                                     />
                                     {errors.firstname && (
-                                        <p className="text-xs italic text-red-500">
-                                            {errors.firstname.message}
-                                        </p>
+                                        <p className="text-xs italic text-red-500">{errors.firstname.message}</p>
                                     )}
                                 </div>
                             </div>
@@ -156,9 +128,7 @@ const ContactForm = () => {
                                         className="w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-sky-400 dark:focus:ring-sky-400/10 sm:text-sm"
                                     />
                                     {errors.lastname && (
-                                        <p className="text-xs italic text-red-500">
-                                            {errors.lastname.message}
-                                        </p>
+                                        <p className="text-xs italic text-red-500">{errors.lastname.message}</p>
                                     )}
                                 </div>
                             </div>
@@ -175,9 +145,7 @@ const ContactForm = () => {
                                         className="w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-sky-400 dark:focus:ring-sky-400/10 sm:text-sm"
                                     />
                                     {errors.email && (
-                                        <p className="text-xs italic text-red-500">
-                                            {errors.email.message}
-                                        </p>
+                                        <p className="text-xs italic text-red-500">{errors.email.message}</p>
                                     )}
                                 </div>
                             </div>
@@ -192,9 +160,7 @@ const ContactForm = () => {
                                         className="w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-sky-400 dark:focus:ring-sky-400/10 sm:text-sm"
                                     />
                                     {errors.subject && (
-                                        <p className="text-xs italic text-red-500">
-                                            {errors.subject.message}
-                                        </p>
+                                        <p className="text-xs italic text-red-500">{errors.subject.message}</p>
                                     )}
                                 </div>
                             </div>
@@ -210,9 +176,7 @@ const ContactForm = () => {
                                         className="w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-sky-400 dark:focus:ring-sky-400/10 sm:text-sm sm:leading-6"
                                     />
                                     {errors.message && (
-                                        <p className="text-xs italic text-red-500">
-                                            {errors.message.message}
-                                        </p>
+                                        <p className="text-xs italic text-red-500">{errors.message.message}</p>
                                     )}
                                 </div>
                             </div>

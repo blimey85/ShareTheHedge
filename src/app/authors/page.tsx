@@ -3,14 +3,7 @@ import Image from 'next/image'
 import parse from 'html-react-parser'
 
 import { SimpleLayout } from '../../components/SimpleLayout'
-import {
-    PiGoodreadsLogoBold,
-    PiHouseBold,
-    PiInstagramLogoBold,
-    PiSpotifyLogoBold,
-    PiTiktokLogoBold,
-    PiYoutubeLogoBold,
-} from 'react-icons/pi'
+import { PiGoodreadsLogo, PiHouse, PiInstagramLogo, PiSpotifyLogo, PiTiktokLogo, PiYoutubeLogo } from 'react-icons/pi'
 import Link from 'next/link'
 // import oliviaImage from '@/images/olivia_office.jpg'
 
@@ -40,8 +33,7 @@ const people = [
         instagramUrl: 'https://www.instagram.com/oswaldcorbett',
         youtubeUrl: '',
         goodreadsUrl: '',
-        spotifyUrl:
-            'https://open.spotify.com/playlist/3JXq1TdRFSqpIUGUwpc2V8?si=5b35c9cdd2e6428b',
+        spotifyUrl: 'https://open.spotify.com/playlist/3JXq1TdRFSqpIUGUwpc2V8?si=5b35c9cdd2e6428b',
         websiteUrl: 'https://oswaldcorbett.com/',
     },
     {
@@ -55,8 +47,7 @@ const people = [
         instagramUrl: 'https://www.instagram.com/oliviagaramendi',
         youtubeUrl: '',
         goodreadsUrl: '',
-        spotifyUrl:
-            'https://open.spotify.com/playlist/6nA4Y7q18qCyqF4c1fhQpY?si=708334f412374cdb',
+        spotifyUrl: 'https://open.spotify.com/playlist/6nA4Y7q18qCyqF4c1fhQpY?si=708334f412374cdb',
         websiteUrl: 'https://oliviagaramendi.com/',
     },
 ]
@@ -105,82 +96,56 @@ export default function Authors() {
                                     {person.name}
                                 </Link>
                             </h2>
-                            <p className="text-base leading-7 text-gray-600 dark:text-gray-400">
-                                {person.genre}
-                            </p>
+                            <p className="text-base leading-7 text-gray-600 dark:text-gray-400">{person.genre}</p>
                             <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-400">
                                 {parse(person.bio)}
                             </p>
                             <ul role="list" className="mt-6 flex gap-x-6">
                                 {person.instagramUrl && (
                                     <li>
-                                        <a
-                                            href={person.instagramUrl}
-                                            className="text-gray-400 hover:text-gray-500">
-                                            <span className="sr-only">
-                                                Instagram
-                                            </span>
-                                            <PiInstagramLogoBold size={20} />
+                                        <a href={person.instagramUrl} className="text-gray-400 hover:text-gray-500">
+                                            <span className="sr-only">Instagram</span>
+                                            <PiInstagramLogo size={20} />
                                         </a>
                                     </li>
                                 )}
                                 {person.tiktokUrl && (
                                     <li>
-                                        <a
-                                            href={person.tiktokUrl}
-                                            className="text-gray-400 hover:text-gray-500">
-                                            <span className="sr-only">
-                                                TikTok
-                                            </span>
-                                            <PiTiktokLogoBold size={20} />
+                                        <a href={person.tiktokUrl} className="text-gray-400 hover:text-gray-500">
+                                            <span className="sr-only">TikTok</span>
+                                            <PiTiktokLogo size={20} />
                                         </a>
                                     </li>
                                 )}
                                 {person.youtubeUrl && (
                                     <li>
-                                        <a
-                                            href={person.youtubeUrl}
-                                            className="text-gray-400 hover:text-gray-500">
-                                            <span className="sr-only">
-                                                Youtube
-                                            </span>
-                                            <PiYoutubeLogoBold size={20} />
+                                        <a href={person.youtubeUrl} className="text-gray-400 hover:text-gray-500">
+                                            <span className="sr-only">Youtube</span>
+                                            <PiYoutubeLogo size={20} />
                                         </a>
                                     </li>
                                 )}
                                 {person.goodreadsUrl && (
                                     <li>
-                                        <a
-                                            href={person.goodreadsUrl}
-                                            className="text-gray-400 hover:text-gray-500">
-                                            <span className="sr-only">
-                                                Twitter
-                                            </span>
-                                            <PiGoodreadsLogoBold size={20} />
+                                        <a href={person.goodreadsUrl} className="text-gray-400 hover:text-gray-500">
+                                            <span className="sr-only">Twitter</span>
+                                            <PiGoodreadsLogo size={20} />
                                         </a>
                                     </li>
                                 )}
                                 {person.spotifyUrl && (
                                     <li>
-                                        <a
-                                            href={person.spotifyUrl}
-                                            className="text-gray-400 hover:text-gray-500">
-                                            <span className="sr-only">
-                                                Twitter
-                                            </span>
-                                            <PiSpotifyLogoBold size={20} />
+                                        <a href={person.spotifyUrl} className="text-gray-400 hover:text-gray-500">
+                                            <span className="sr-only">Twitter</span>
+                                            <PiSpotifyLogo size={20} />
                                         </a>
                                     </li>
                                 )}
                                 {person.websiteUrl && (
                                     <li>
-                                        <a
-                                            href={person.websiteUrl}
-                                            className="text-gray-400 hover:text-gray-500">
-                                            <span className="sr-only">
-                                                Twitter
-                                            </span>
-                                            <PiHouseBold size={20} />
+                                        <a href={person.websiteUrl} className="text-gray-400 hover:text-gray-500">
+                                            <span className="sr-only">Twitter</span>
+                                            <PiHouse size={20} />
                                         </a>
                                     </li>
                                 )}
